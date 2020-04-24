@@ -36,8 +36,8 @@ public class WebServerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/oauth/token").permitAll()
-                .antMatchers("/oauth/**").permitAll()
                 .antMatchers("/auth/**").permitAll()
+                .antMatchers("/oauth/**").permitAll()
                 .and()
                 .csrf().disable();
         // 禁用缓存
