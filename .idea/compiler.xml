@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="struggler-registry" />
+        <module name="struggler-common-business" />
+        <module name="struggler-spring-admin" />
+        <module name="struggler-authorization-server" />
+        <module name="struggler-common-feigun" />
+        <module name="struggler-mybatis-generator-lombok" />
+        <module name="struggler-sys-manage" />
+        <module name="struggler-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="struggler-auth" target="1.8" />
+      <module name="struggler-authorization-server" target="1.8" />
+      <module name="struggler-common-business" target="1.8" />
+      <module name="struggler-common-feigun" target="1.8" />
+      <module name="struggler-common-plugin" target="1.8" />
+      <module name="struggler-gateway" target="1.8" />
+      <module name="struggler-mybatis-generator-lombok" target="1.5" />
+      <module name="struggler-platform" target="1.8" />
+      <module name="struggler-public-service" target="1.8" />
+      <module name="struggler-registry" target="1.8" />
+      <module name="struggler-spring-admin" target="1.8" />
+      <module name="struggler-sys-manage" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="struggler-authorization-server" options="-parameters" />
+      <module name="struggler-common-business" options="-parameters" />
+      <module name="struggler-common-feigun" options="-parameters" />
+      <module name="struggler-gateway" options="-parameters" />
+      <module name="struggler-registry" options="-parameters" />
+      <module name="struggler-spring-admin" options="-parameters" />
+      <module name="struggler-sys-manage" options="-parameters" />
+    </option>
+  </component>
+</project>

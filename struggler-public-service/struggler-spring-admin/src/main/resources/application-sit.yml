@@ -1,0 +1,42 @@
+server:
+  port: 8900
+
+spring:
+  application:
+    name: struggler-spring-admin
+  security:
+    user:
+      name: admin
+      password: 123456
+eureka:
+  instance:
+    prefer-ip-address: true
+    # 发呆时间，即服务续约到期时间（缺省为90s）
+    lease-expiration-duration-in-seconds: 90
+    # 心跳时间，即服务续约间隔时间（缺省为30s
+    lease-renewal-interval-in-seconds: 30
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info
+  client:
+    service-url:
+      defaultZone: http://localhost:31001/eureka/
+logging:
+  level:
+    org.springframework.web: debug
+  path: ../logs
+  file:
+    max-size: 30MB
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3500

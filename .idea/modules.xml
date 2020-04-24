@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/struggler-auth/struggler-auth.iml" filepath="$PROJECT_DIR$/struggler-auth/struggler-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-auth/struggler-authorization-server/struggler-authorization-server.iml" filepath="$PROJECT_DIR$/struggler-auth/struggler-authorization-server/struggler-authorization-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-common-plugin/struggler-common-business/struggler-common-business.iml" filepath="$PROJECT_DIR$/struggler-common-plugin/struggler-common-business/struggler-common-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-common-plugin/struggler-common-feigun/struggler-common-feigun.iml" filepath="$PROJECT_DIR$/struggler-common-plugin/struggler-common-feigun/struggler-common-feigun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-common-plugin/struggler-common-plugin.iml" filepath="$PROJECT_DIR$/struggler-common-plugin/struggler-common-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-public-service/struggler-gateway/struggler-gateway.iml" filepath="$PROJECT_DIR$/struggler-public-service/struggler-gateway/struggler-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-common-plugin/struggler-mybatis-generator-lombok/struggler-mybatis-generator-lombok.iml" filepath="$PROJECT_DIR$/struggler-common-plugin/struggler-mybatis-generator-lombok/struggler-mybatis-generator-lombok.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-platform.iml" filepath="$PROJECT_DIR$/struggler-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-public-service/struggler-public-service.iml" filepath="$PROJECT_DIR$/struggler-public-service/struggler-public-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-public-service/struggler-registry/struggler-registry.iml" filepath="$PROJECT_DIR$/struggler-public-service/struggler-registry/struggler-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-public-service/struggler-spring-admin/struggler-spring-admin.iml" filepath="$PROJECT_DIR$/struggler-public-service/struggler-spring-admin/struggler-spring-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/struggler-sys-manage/struggler-sys-manage.iml" filepath="$PROJECT_DIR$/struggler-sys-manage/struggler-sys-manage.iml" />
+    </modules>
+  </component>
+</project>

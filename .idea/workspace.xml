@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60217152-ea12-4b8a-81b2-d8221c99ddc2" name="Default Changelist" comment="初始化" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1aoBZJVttBhpXa9BifAVDglAFvY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.StrugglerGatewayApplication">
+    <configuration name="StrugglerAuthorizationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="struggler-authorization-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.struggler.authorization.StrugglerAuthorizationServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrugglerGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="struggler-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.struggler.gateway.StrugglerGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrugglerRegistryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="struggler-registry" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.struggler.registry.StrugglerRegistryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrugglerSpringAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="struggler-spring-admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.struggler.admin.StrugglerSpringAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrugglerSysManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="struggler-sys-manage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.struggler.sys.StrugglerSysManageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.26970634" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60217152-ea12-4b8a-81b2-d8221c99ddc2" name="Default Changelist" comment="" />
+      <created>1587392119690</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587392119690</updated>
+      <workItem from="1587392127341" duration="362000" />
+      <workItem from="1587477955934" duration="3177000" />
+      <workItem from="1587524659466" duration="8216000" />
+      <workItem from="1587710114791" duration="6842000" />
+      <workItem from="1587719796320" duration="2518000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="71" y="0" key="CommitChangelistDialog2" timestamp="1587722327954">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="71" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587722327954" />
+    <state width="476" height="438" key="DebuggerActiveHint" timestamp="1587716415140">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="476" height="438" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1587716415140" />
+    <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1587719858642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587719858642" />
+    <state width="944" height="238" key="GridCell.Tab.0.bottom" timestamp="1587719518820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587719518820" />
+    <state width="944" height="238" key="GridCell.Tab.0.center" timestamp="1587719518820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587719518820" />
+    <state width="944" height="238" key="GridCell.Tab.0.left" timestamp="1587719518820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587719518820" />
+    <state width="944" height="238" key="GridCell.Tab.0.right" timestamp="1587719518820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587719518820" />
+    <state width="944" height="238" key="GridCell.Tab.1.bottom" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.1.center" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.1.left" timestamp="1587719518820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587719518820" />
+    <state width="944" height="238" key="GridCell.Tab.1.right" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.2.bottom" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.2.center" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.2.left" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state width="944" height="238" key="GridCell.Tab.2.right" timestamp="1587719518821">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="944" height="238" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1587719518821" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1587719982741">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587719982741" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1587720130589">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587720130589" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587718265285">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1587718265285" />
+    <state x="375" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1587524659354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="375" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587524659354" />
+    <state x="370" y="119" width="809" height="548" key="find.popup" timestamp="1587571625309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="370" y="119" width="809" height="548" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1587571625309" />
+    <state x="472" y="166" key="git4idea.merge.GitPullDialog" timestamp="1587719904448">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="472" y="166" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1587719904448" />
+    <state x="518" y="242" key="git4idea.rebase.GitRebaseDialog" timestamp="1587719942325">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="518" y="242" key="git4idea.rebase.GitRebaseDialog/0.0.1366.728@0.0.1366.728" timestamp="1587719942325" />
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1587722337245">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587722337245" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/struggler-auth/struggler-authorization-server/src/main/java/com/struggler/authorization/service/impl/StrugglerUserDetailService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/provisioning/JdbcUserDetailsManager.class</url>
+          <line>151</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class</url>
+          <line>357</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.class</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/authentication/OAuth2AuthenticationManager.class</url>
+          <line>48</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE.jar!/org/springframework/security/oauth2/provider/authentication/OAuth2AuthenticationManager.class</url>
+          <line>77</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

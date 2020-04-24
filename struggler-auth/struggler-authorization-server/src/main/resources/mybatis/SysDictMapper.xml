@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.struggler.authorization.mapper.SysDictMapper">
+
+    <!--查询所有数据字典-->
+    <select id="queryPage" resultType="com.struggler.common.model.SysDict"
+            parameterType="com.struggler.common.utils.Query">
+        select *
+        from sys_dict d
+        <where>
+            <if test="params.dicCode!=null">d.dic_code=#{params.dicCode}</if>
+        </where>
+        order by
+        <choose>
+            <when test="params.sidx=='dicCode'">d.dic_code</when>
+            <when test="params.sidx=='dicName'">d.dic_code</when>
+            <when test="params.sidx=='dicComments'">d.dic_code</when>
+            <when test="params.sidx=='dicFlag'">d.dic_code</when>
+            <otherwise>updated_date</otherwise>
+        </choose>
+        <choose>
+            <when test="params.order=='desc'">desc</when>
+            <otherwise>asc</otherwise>
+        </choose>
+    </select>
+    <select id="findByDicCode" resultType="com.struggler.common.model.SysDict">
+        select * from sys_dict where dic_code = #{dicCode}
+    </select>
+</mapper>

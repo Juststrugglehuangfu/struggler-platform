@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.struggler.authorization.mapper.SysRoleMenuMapper" >
+
+    <!-- 查询用户的所有菜单ID -->
+    <select id="queryRoleMenuIdByRoleId" parameterType="java.lang.Long" resultType="java.lang.Long">
+        select distinct ur.menu_id
+        from sys_role_menu ur
+        where ur.del=1 and ur.role_id = #{roleId}
+    </select>
+
+    <update id="flagDelByRoleId"  parameterType="java.lang.Long" >
+            update sys_role_menu set del=-1 where role_id=#{roleId}
+    </update>
+
+    <update id="flagDelByRoleIds"  parameterType="java.util.List" >
+            update sys_role_menu set del=-1 where role_id in
+            <foreach collection="roleIds" item="id" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+    </update>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/struggler-auth/struggler-authorization-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-common-plugin/struggler-common-business/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-common-plugin/struggler-common-feigun/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-public-service/struggler-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-public-service/struggler-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-public-service/struggler-spring-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/struggler-sys-manage/src/main/java" charset="UTF-8" />
+  </component>
+</project>

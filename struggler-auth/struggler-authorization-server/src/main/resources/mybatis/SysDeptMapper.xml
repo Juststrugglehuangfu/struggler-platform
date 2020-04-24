@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.struggler.authorization.mapper.SysDeptMapper">
+
+
+    <select id="queryPage" resultType="com.struggler.common.model.SysDept">
+        select * from sys_dept_t
+         order by created_date desc
+    </select>
+
+    <select id="queryListParentId" resultType="com.struggler.common.model.SysDept">
+        select * from sys_dept_t where parent_id = #{parentId} order by sort asc
+    </select>
+
+    <select id="queryDeptByInfo" parameterType="com.struggler.common.model.SysDept" resultType="com.struggler.common.model.SysDept">
+        select * from sys_dept_t where 1=1
+        <if test="null != deptType and deptType != '' "> and dept_type=#{deptType}</if>
+        <if test="null != comSerial and comSerial != '' "> and com_serial=#{comSerial}</if>
+    </select>
+
+</mapper>

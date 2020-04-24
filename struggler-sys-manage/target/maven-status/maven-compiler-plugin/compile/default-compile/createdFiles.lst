@@ -1,0 +1,9 @@
+com\struggler\sys\SerialNumberProviderHystrix.class
+com\struggler\sys\config\CorsConfig.class
+com\struggler\sys\config\ResourceServerConfig.class
+com\struggler\sys\config\SecurityConfig.class
+META-INF\spring-configuration-metadata.json
+com\struggler\sys\SerialNumberProvider.class
+com\struggler\sys\config\OAuth2ClientConfig.class
+com\struggler\sys\TestController.class
+com\struggler\sys\StrugglerSysManageApplication.class

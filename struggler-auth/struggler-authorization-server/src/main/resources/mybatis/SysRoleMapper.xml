@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.struggler.authorization.mapper.SysRoleMapper">
+
+    <!--查询所有用户-->
+    <select id="queryPage" parameterType="java.util.Map" resultType="com.struggler.common.model.SysRole">
+        select *
+        from sys_role u
+        <where>
+            u.com_serial = #{params.comSerial}
+            <if test="null != params.del and params.del != '' ">and u.del=#{params.del}</if>
+            <if test="null != params.roleName and params.roleName != ''">and u.role_name like
+                CONCAT('%',#{params.roleName,jdbcType=VARCHAR},'%')
+            </if>
+            <if test="null != params.roleCode and params.roleCode != '' ">and u.role_code=#{params.roleCode}</if>
+            <if test="null != params.status  and params.status != '' ">and u.status=#{params.status}</if>
+            <if test="null != params.roleType and params.roleType != '' ">and u.role_type=#{params.roleType}</if>
+            <if test="null != params.readonly and params.readonly != '' ">and u.readonly=#{params.readonly}</if>
+        </where>
+        order by
+        <choose>
+            <when test="params.orderField=='roleName'">u.role_name</when>
+            <when test="params.orderField=='roleCode'">u.role_code</when>
+            <when test="params.orderField=='status'">u.status</when>
+            <when test="params.orderField=='roleType'">u.role_type</when>
+            <when test="params.orderField=='readonly'">u.readonly</when>
+            <otherwise>u.created_date</otherwise>
+        </choose>
+        <choose>
+            <when test="params.order=='asc'">asc</when>
+            <otherwise>desc</otherwise>
+        </choose>
+    </select>
+    <select id="queryRoleByUserId" resultType="com.struggler.common.model.SysRole">
+        SELECT r.*
+        FROM sys_user_role_t ur left join sys_role r on ur.role_id=r.id
+        WHERE ur.user_id=#{userId} and r.status=1
+    </select>
+    <select id="queryRoleByDeptId" resultType="com.struggler.common.model.SysRole">
+        SELECT r.*
+        FROM sys_dept_role dr left join sys_role r on dr.role_id=r.id
+        WHERE dr.dept_id=#{deptId} and r.status=1
+    </select>
+
+    <update id="flagDelById" parameterType="java.lang.Long">
+            update sys_role set del=-1 where id=#{id}
+    </update>
+
+    <update id="flagDelByIds" parameterType="java.util.List">
+        update sys_role set del=-1 where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+    <update id="enableById">
+            update sys_role set status=#{status} where id=#{id}
+    </update>
+
+    <update id="enableByIds">
+        update sys_role set status=#{status} where id in
+        <foreach collection="ids" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+
+</mapper>

@@ -1,0 +1,4 @@
+com\struggler\common\feign\ResourceServerConfig.class
+com\struggler\common\feign\CorsConfig.class
+com\struggler\common\feign\OAuth2ClientConfig.class
+com\struggler\common\feign\SecurityConfig.class

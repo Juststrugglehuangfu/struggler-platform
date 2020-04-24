@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.struggler.authorization.mapper.SysSerialNumberMapper" >
+
+    <select id="queryPage" resultType="com.struggler.common.model.SysSerialNumber"
+            parameterType="com.struggler.common.utils.Query">
+        select * from sys_serial_number n
+        order by
+        <choose>
+            <when test="params.sidx=='ruleCode'">n.rule_code</when>
+            <when test="params.sidx=='ruleName'">n.rule_name</when>
+            <otherwise>n.updated_date</otherwise>
+        </choose>
+        <choose>
+            <when test="params.order=='desc'">desc</when>
+            <otherwise>asc</otherwise>
+        </choose>
+    </select>
+    <!--根据ruleCode更新当前值-->
+    <update id="updateCurrentValueByRuleCode" parameterType="java.lang.String">
+        update sys_serial_number n set n.current_value = n.current_value + n.step where n.rule_code = #{ruleCode}
+    </update>
+
+    <!--根据规则编码获取当前流水号及规则信息-->
+    <select id="selectSerialNumberByRuleCode" resultType="com.struggler.common.model.SysSerialNumber">
+        select n.*,sysdate() as sys_time from sys_serial_number n where n.rule_code = #{ruleCode}
+    </select>
+</mapper>
