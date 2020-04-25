@@ -8,8 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -17,6 +19,9 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
+import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.code.InMemoryAuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -31,7 +36,6 @@ import javax.sql.DataSource;
  **/
 @Configuration
 @EnableAuthorizationServer
-@Order(3)
 public class AuthenticationServerConfig extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -53,6 +57,10 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
         return new RedisTokenStore(redisConnectionFactory);
     }
 
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     /**
      * 用来配置令牌端点(Token Endpoint)的安全约束.
      * @param security AuthorizationServerSecurityConfigurer
@@ -67,37 +75,45 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
                 // 开启/oauth/check_token验证端口认证权限访问
                 .checkTokenAccess("isAuthenticated()");
     }
-    private BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-    private String bCryptPasswordEncoder(String password){
-        return bCryptPasswordEncoder.encode(password);
-    }
     /**
      * 用来配置客户端详情服务（ClientDetailsService），客户端详情信息在这里进行初始化，你能够把客户端详情信息写死在这里或者是通过数据库来存储调取详情信息
      * @return
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        // clients.withClientDetails(clientDetails());
-        clients.inMemory()
-                .withClient("android")
-                .scopes("read")
-                .secret(bCryptPasswordEncoder("android"))
-                .authorizedGrantTypes("password", "authorization_code", "refresh_token").accessTokenValiditySeconds(60*60*24).refreshTokenValiditySeconds(60*60*24*7)
-                .and()
-                .withClient("webapp")
-                .scopes(bCryptPasswordEncoder("read"))
-                .authorizedGrantTypes("implicit")
-                .and()
-                .withClient("browser")
-                .authorizedGrantTypes("refresh_token", "password")
-                .scopes("read");
+        String finalSecret =  new BCryptPasswordEncoder().encode("123456");
+         clients.withClientDetails(clientDetails());
+//        clients.inMemory()
+//                .withClient("android")
+//                .scopes("read")
+//                .secret("123456")
+//                .authorizedGrantTypes("password", "authorization_code", "refresh_token").accessTokenValiditySeconds(60*60*24).refreshTokenValiditySeconds(60*60*24*7)
+//                .and()
+//                .withClient("webapp")
+//                .scopes("all")
+//                .secret("123456")
+//                .authorizedGrantTypes("implicit")
+//                .and()
+//                .withClient("browser")
+//                .authorizedGrantTypes("refresh_token", "password")
+//                .scopes("read")
+//                .and()
+//                .withClient("client_2")
+//                .authorizedGrantTypes("password", "refresh_token")
+//                .scopes("select")
+//                .authorities("oauth2")
+//                .secret("123456");
     }
 
 
     @Bean
     public ClientDetailsService clientDetails() {
-        return new JdbcClientDetailsService(dataSource);
+
+        JdbcClientDetailsService service = new JdbcClientDetailsService(dataSource);
+        service.setPasswordEncoder(passwordEncoder);
+        return service;
     }
+
 
     @Bean
     public WebResponseExceptionTranslator webResponseExceptionTranslator(){
@@ -115,6 +131,7 @@ public class AuthenticationServerConfig extends AuthorizationServerConfigurerAda
                 .userDetailsService(userDetailService)
                 .authenticationManager(authenticationManager);
         endpoints.authorizationCodeServices(redisAuthorizationCodeServices);
+        endpoints.allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
         //endpoints.tokenServices(defaultTokenServices());
         //认证异常翻译
         // endpoints.exceptionTranslator(webResponseExceptionTranslator());
