@@ -31,7 +31,7 @@
         <lombok.version>1.18.4</lombok.version>
         <mybatisplus.version>2.2.0</mybatisplus.version>
         <mybatisplus.spring.version>1.0.5</mybatisplus.spring.version>
-        <mysql.version>5.1.46</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <fastjson.version>1.2.51</fastjson.version>
         <log4j.version>1.2.16</log4j.version>
     </properties>
